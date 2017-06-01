@@ -20,7 +20,7 @@ public class PropertyExampleContinuedTest {
         System.setOut(out);
     }
 
-    @Ignore
+
     @Test
     public void bindAndUnbindOnePropertyToAnother() throws Exception {
         propertyExample.bindAndUnbindOnePropertyToAnother();
@@ -29,7 +29,7 @@ public class PropertyExampleContinuedTest {
         verify(out).println("Binding otherProperty to anIntProperty.");
         verify(out).println("otherProperty.get() = 1024");
         verify(out).println("Calling anIntProperty.set(7168).");
-        verify(out, times(3)).println("otherProperty.get() = 7168");
+        verify(out, times(2)).println("otherProperty.get() = 7168");
         verify(out).println("Unbinding otherProperty from anIntProperty.");
         verify(out).println("Calling anIntProperty.set(8192).");
     }

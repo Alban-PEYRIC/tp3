@@ -43,7 +43,7 @@ public class BidiBindingCircle extends Application {
     }
 
     private void createBindings() {
-
+        pane.
     }
 
     private void configStage(Stage stage) {
@@ -54,7 +54,7 @@ public class BidiBindingCircle extends Application {
     }
 
     private void addSlider() {
-        throw new RuntimeException("Not yet implemented !");
+
     }
 
     private void addPane() {

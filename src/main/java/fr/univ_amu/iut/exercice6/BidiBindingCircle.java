@@ -43,7 +43,7 @@ public class BidiBindingCircle extends Application {
     }
 
     private void createBindings() {
-        throw new RuntimeException("Not yet implemented !");
+
     }
 
     private void configStage(Stage stage) {

@@ -46,7 +46,7 @@ public class SlowPong extends Application {
     }
 
     private Pane createPongPane() {
-        throw new RuntimeException("Not yet implemented !");
+        this.pongPane = new Pane(ball,leftPaddle,rightPaddle,startButton);
     }
 
     private Button createStartButton() {

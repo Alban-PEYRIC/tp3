@@ -18,7 +18,24 @@ public class Paddle extends Rectangle {
 
 
     public Paddle(double x) {
+        super(x, 0, 20, 20);
+        setFill(javafx.scene.paint.Color.ALICEBLUE);
+        setCursor(Cursor.CLOSED_HAND);
 
+        setOnMousePressed(me -> {
+            initPaddleTranslateY = getTranslateY();
+            paddleDragAnchorY = me.getSceneY();
+        });
+        setOnMouseDragged(me -> {
+            double dragY = me.getSceneY() - paddleDragAnchorY;
+            paddleY.setValue(initPaddleTranslateY + dragY);
+        });
 
+        translateYProperty().bind(paddleY);
+        paddleY.setValue(200);
     }
 }
+
+
+
+
